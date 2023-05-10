@@ -20,6 +20,7 @@ namespace XamarinWS
         public MainPage()
         {
             InitializeComponent();
+           
         }
 
         private async void btnGet_Clicked(object sender, EventArgs e)
@@ -28,6 +29,24 @@ namespace XamarinWS
             List<XamarinWS.Ws.Datos> posts = JsonConvert.DeserializeObject<List<XamarinWS.Ws.Datos>>(content);
             _post = new ObservableCollection<XamarinWS.Ws.Datos>(posts);
             MyListView.ItemsSource = _post;
+            base.OnAppearing();
+        }
+
+        private void btnRegistro_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Registro());
+        }
+
+       
+        void MyListView_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        {
+          
+            var id = (Ws.Datos)e.Item;
+            int id2 = id.codigo;
+
+
+            DisplayAlert("Alerta", id2.ToString(), "Cerrar");
+            Navigation.PushAsync(new Actualizar(id2));
         }
     }
 }

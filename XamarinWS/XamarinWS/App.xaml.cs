@@ -10,7 +10,7 @@ namespace XamarinWS
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Registro());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart ()

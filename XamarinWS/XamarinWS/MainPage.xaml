@@ -12,25 +12,19 @@
                 x:Name="btnGet"
                 Clicked="btnGet_Clicked"
                 ></Button>
-        <ListView x:Name="MyListView">
+        <ListView x:Name="MyListView" ItemTapped="MyListView_ItemTapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
                             <Label x:Name="lblNombre" Text="{Binding nombre}" />
-                            
                             <Label x:Name="lblUbicacion" Text="{Binding ubicacion}" />
-
                         </StackLayout>
-
                     </ViewCell>
-
                 </DataTemplate>
-
             </ListView.ItemTemplate>
-
-
         </ListView>
+        <Button x:Name="btnRegistro" Text="Registrar" Clicked="btnRegistro_Clicked"/>
     </StackLayout>
 
 </ContentPage>

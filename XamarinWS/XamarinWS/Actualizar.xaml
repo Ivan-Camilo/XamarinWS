@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinWS.Actualizar"
+    NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Actualizar Registros!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+      
+        <ListView x:Name="MyListView1" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblNombre" Text="{Binding nombre}" />
+                            <Label x:Name="lblUbicacion" Text="{Binding ubicacion}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+   
+         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnActualizar" Text="ACTUALIZAR" Clicked="Obtener" Grid.Row="0" Grid.Column="0"/>
+            <Button x:Name="btnEliminar" Text="ELIMINAR" Grid.Row="0" Grid.Column="1"/>
+         </Grid>
+    </StackLayout>
+       
+   
+
+</ContentPage>
+
