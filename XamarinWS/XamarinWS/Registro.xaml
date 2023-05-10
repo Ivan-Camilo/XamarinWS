@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinWS.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="REGISTRO DE USUARIOS" HorizontalTextAlignment="Center" FontSize="20"/>
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" Keyboard="Numeric"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" />
+            <Entry x:Name="txtUbicacion" Placeholder="Ingrese la ubicacion" />
+            <Entry x:Name="txtExtension" Placeholder="Ingrese la extension" Keyboard="Numeric"/>
+            <Entry x:Name="txtTipo" Placeholder="Ingrese el tipo"/>
+            <Entry x:Name="txtVariedad" Placeholder="Ingrese la variedad"/>
+            <Entry x:Name="txtEncargado" Placeholder="Ingrese el encargado" />
+            <Entry x:Name="txtNCamas" Placeholder="Ingrese el numero de camas"/>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnInsertar" Text="INSERTAR" Clicked="btnInsertar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnRegresar" Text="REGRESAR" Clicked="btnRegresar_Clicked" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+   
+
+
+    </ContentPage.Content>
+</ContentPage>
+
