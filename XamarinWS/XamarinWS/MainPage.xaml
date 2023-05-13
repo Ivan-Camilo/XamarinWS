@@ -7,23 +7,52 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Consumir Web Service!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label x:Name="text0" Text="" FontSize="Title" Padding="30,10,30,10"/>
-        <Button Text="Consultar"
-                x:Name="btnGet"
-                Clicked="btnGet_Clicked"
-                ></Button>
+
+        <Grid HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "25"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ID" FontSize="16" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center"/>
+            <Label Text="Nombre" FontSize="16" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Ubicacion" FontSize="16" Grid.Row="0" Grid.Column="2"/>
+
+        </Grid>
         <ListView x:Name="MyListView" ItemTapped="MyListView_ItemTapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label x:Name="lblNombre" Text="{Binding nombre}" />
-                            <Label x:Name="lblUbicacion" Text="{Binding ubicacion}" />
+
+                             <Grid HorizontalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="ldlID" Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" />
+                                <Label x:Name="lblUbicacion" Text="{Binding ubicacion}" Grid.Row="0" Grid.Column="2"/>
+                            </Grid>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Label x:Name="text0" Text="" FontSize="Title" Padding="30,10,30,10"/>
+        <Button Text="Consultar"
+                x:Name="btnGet"
+                Clicked="btnGet_Clicked">
+        </Button>
         <Button x:Name="btnRegistro" Text="Registrar" Clicked="btnRegistro_Clicked"/>
     </StackLayout>
 

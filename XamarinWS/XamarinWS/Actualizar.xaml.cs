@@ -17,10 +17,11 @@ namespace XamarinWS
 		{
 			InitializeComponent ();
             id = id2;
+            Obtener();
             
 		}
 
-        private async void Obtener(object sender, EventArgs e)
+        public async void Obtener()
         {
             var content = await client.GetStringAsync(Url + "?codigo=" + id);
 

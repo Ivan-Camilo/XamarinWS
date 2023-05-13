@@ -34,6 +34,8 @@ namespace XamarinWS
 
         private void btnRegistro_Clicked(object sender, EventArgs e)
         {
+            var mensaje = "Bienvenido";
+            DependencyService.Get<Mensaje>().shortAlert(mensaje);
             Navigation.PushAsync(new Registro());
         }
 

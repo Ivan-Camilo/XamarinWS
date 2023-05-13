@@ -30,7 +30,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnActualizar" Text="ACTUALIZAR" Clicked="Obtener" Grid.Row="0" Grid.Column="0"/>
+            <Button x:Name="btnActualizar" Text="ACTUALIZAR"  Grid.Row="0" Grid.Column="0"/>
             <Button x:Name="btnEliminar" Text="ELIMINAR" Grid.Row="0" Grid.Column="1"/>
          </Grid>
     </StackLayout>
